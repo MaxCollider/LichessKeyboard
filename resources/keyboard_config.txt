@@ -1,0 +1,1 @@
+{"pawn": "w", "right beat": "e", "left beat": "q", "queen": "s", "left rook": "z", "right rook": "x", "king": "shift", "left knight": "s", "right knight": "d", "bishop": "space"}

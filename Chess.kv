@@ -1,0 +1,163 @@
+#:import Factory kivy.factory.Factory
+<MyPopup@Popup>:
+    auto_dismiss: False
+    size_hint: 0.8, 0.2
+    title: 'Data successfully saved!'
+    Button:
+        text: 'Close me!'
+        on_release: root.dismiss()
+<MainFrame>:
+    orientation: 'vertical'
+
+    BoxLayout:
+        size_hint: 1, 0.62
+        padding: 5
+        spacing: 12
+        orientation: 'vertical'
+
+        TextInput:
+            id: username_input
+            text: 'KappaGolden'
+            multiline: False
+        TextInput:
+            id: password_input
+            password: True
+            text: '192204DeN'
+            multiline: False
+        BoxLayout:
+            padding: 3
+            spacing: 2
+            Button:
+                text: 'Save'
+                on_release: app.save_username(), Factory.MyPopup().open()
+            Button:
+                id: pass_hide_button
+                text: 'Hide'
+                on_press: app.hide_pass()
+        Button:
+            size_hint: 1, 0.5
+            text: 'Run Application'
+            on_release: app.run_browser()
+    Label:
+        size_hint: 1, 0.05
+        text: 'OR adjust with GUI:'
+    GridLayout:
+        cols: 2
+        size_hint: 1, 0.7
+
+        BoxLayout:
+            padding: 2
+            Image:
+                size_hint: 0.3, 1
+                source: 'resources/figures1/wpawn.jpg'
+                size: self.texture_size
+
+            Button:
+                id: pawn
+                text: 'Pawn key is: ' + app.fig_keys['pawn']
+                on_release: app.keyboard_listener('pawn')
+
+        BoxLayout:
+            padding: 2
+            Image:
+                size_hint: 0.3, 1
+                source: 'resources/figures1/wbishop.jpg'
+                size: self.texture_size
+
+            Button:
+                id: bishop
+                text: 'Bishop key is: ' + app.fig_keys['bishop']
+                on_release: app.keyboard_listener('bishop')
+
+        BoxLayout:
+            padding: 2
+            Image:
+                size_hint: 0.3, 1
+                source: 'resources/figures1/wknight.jpg'
+                size: self.texture_size
+
+            Button:
+                id: left knight
+                text: "Left knight key is: " + app.fig_keys['left knight']
+                on_release: app.keyboard_listener('left knight')
+
+        BoxLayout:
+            padding: 2
+            Image:
+                size_hint: 0.3, 1
+                source: 'resources/figures1/wknight.jpg'
+                size: self.texture_size
+
+            Button:
+                id: right knight
+                text: "Right knight key is: " + app.fig_keys['right knight']
+                on_release: app.keyboard_listener('right knight')
+
+        BoxLayout:
+            padding: 2
+            Image:
+                size_hint: 0.3, 1
+                source: 'resources/figures1/wrook.jpg'
+                size: self.texture_size
+
+            Button:
+                id: left rook
+                text: "Left rook key is: " + app.fig_keys['left rook']
+                on_release: app.keyboard_listener('left rook')
+        BoxLayout:
+            padding: 2
+            Image:
+                size_hint: 0.3, 1
+                source: 'resources/figures1/wrook.jpg'
+                size: self.texture_size
+
+            Button:
+                id: right rook
+                text: "Right rook key is: " + app.fig_keys['right rook']
+                on_release: app.keyboard_listener('right rook')
+
+        BoxLayout:
+            padding: 2
+            Image:
+                size_hint: 0.3, 1
+                source: 'resources/figures1/wking.jpg'
+                size: self.texture_size
+
+            Button:
+                id: king
+                text: "King key is: " + app.fig_keys['king']
+                on_release: app.keyboard_listener('king')
+
+        BoxLayout:
+            padding: 2
+            Image:
+                size_hint: 0.3, 1
+                source: 'resources/figures1/wquin.jpg'
+                size: self.texture_size
+
+            Button:
+                id: queen
+                text: "Left knight key is: " + app.fig_keys['queen']
+                on_release: app.keyboard_listener('queen')
+        BoxLayout:
+            padding: 2
+            Image:
+                size_hint: 0.3, 1
+                source: 'resources/figures1/wpawn.jpg'
+                size: self.texture_size
+
+            Button:
+                id: left beat
+                text: "Left knight key is: " + app.fig_keys['left beat']
+                on_release: app.keyboard_listener('left beat')
+        BoxLayout:
+            padding: 2
+            Image:
+                size_hint: 0.3, 1
+                source: 'resources/figures1/wpawn.jpg'
+                size: self.texture_size
+
+            Button:
+                id: right beat
+                text: "Left knight key is: " + app.fig_keys['right beat']
+                on_release: app.keyboard_listener('right beat')

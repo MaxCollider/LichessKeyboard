@@ -1,0 +1,9 @@
+import time
+
+import win32gui
+import win32api
+
+dc = win32gui.GetDC(0)
+red = win32api.RGB(255, 0, 0)
+win32gui.SetPixel(dc, 520, 520, red)
+time.sleep(1.0)
